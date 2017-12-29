@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--id必须是android:id="@android:id/tabhost"-->
+    <com.ljb.fire.ui.widget.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        />
+        android:layout_gravity="bottom"
+        >
+        <!--id必须是android:id="@android:id/tabcontent"
+         with 和height 必须为0-->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+    </com.ljb.fire.ui.widget.FragmentTabHost>
 
 
-</LinearLayout> 
+</FrameLayout>
