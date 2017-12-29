@@ -63,13 +63,12 @@ public class NewsMainFragment extends BaseFragment {
 
     }
 
-    @OnClick({R.id.iv_add_tab, R.id.fab})
+    @OnClick({R.id.iv_add_tab})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_add_tab:
                 break;
-            case R.id.fab:
-                break;
+
         }
     }
 }
